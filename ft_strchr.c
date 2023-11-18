@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 16:37:17 by yel-yaqi          #+#    #+#             */
-/*   Updated: 2023/11/18 19:18:26 by yel-yaqi         ###   ########.fr       */
+/*   Created: 2023/11/18 18:11:10 by yel-yaqi          #+#    #+#             */
+/*   Updated: 2023/11/18 19:54:25 by yel-yaqi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
-# include <stdio.h>
-# include <string.h>
+#include "libft.h"
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (NULL);
+}
 
-#endif
+int	main(void)
+{
+	char	*str = "teste";
+
+	
+	printf("%d\n", ft_strchr(str, 1024) == strchr(str, 1024));
+	printf("%p\n", ft_strchr(str, 256));
+	printf("%p", strchr(str, 256));
+}
+
+/*
+
+100 0000 0000
+
+*/
