@@ -6,7 +6,7 @@
 #    By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/18 16:30:11 by yel-yaqi          #+#    #+#              #
-#    Updated: 2023/11/19 19:01:34 by yel-yaqi         ###   ########.fr        #
+#    Updated: 2023/11/19 19:48:52 by yel-yaqi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ SRCS = ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c \
 	   ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c \
 	   ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c \
 	   ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_calloc.c \
-	   ft_strdup.c ft_strnstr.c ft_atoi.c
+	   ft_strdup.c ft_strnstr.c ft_atoi.c ft_putchar_fd.c \
+	   ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
+	   ft_substr.c ft_striteri.c ft_strjoin.c ft_strtrim.c \
+	   ft_split.c ft_strmapi.c ft_itoa.c
 SRCSB = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
 	    ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
 		ft_lstnew_bonus.c ft_lstsize_bonus.c ft_lstmap_bonus.c
@@ -37,6 +40,7 @@ bonus: $(OBJS) $(OBJSB)
 
 clean: 
 	rm -f $(OBJS)
+	rm -f $(OBJSB)
 
 fclean: clean
 	rm -f $(NAME)
