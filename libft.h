@@ -6,7 +6,7 @@
 /*   By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:37:17 by yel-yaqi          #+#    #+#             */
-/*   Updated: 2023/11/18 19:18:26 by yel-yaqi         ###   ########.fr       */
+/*   Updated: 2023/11/19 10:09:20 by yel-yaqi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <string.h>
+# include <assert.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
