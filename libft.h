@@ -6,7 +6,7 @@
 /*   By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:37:17 by yel-yaqi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:03:06 by yel-yaqi         ###   ########.fr       */
+/*   Updated: 2023/11/19 18:06:49 by yel-yaqi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 #endif
