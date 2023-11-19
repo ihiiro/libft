@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 15:44:54 by yel-yaqi          #+#    #+#             */
-/*   Updated: 2023/11/19 18:29:34 by yel-yaqi         ###   ########.fr       */
+/*   Created: 2023/11/19 18:33:19 by yel-yaqi          #+#    #+#             */
+/*   Updated: 2023/11/19 18:41:46 by yel-yaqi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int	ft_atoi(const char *str)
 {
-	size_t	len_n;
+	long	rslt;
+	long	tmp;
+	int		sign;
 
-	if (!*needle)
-		return ((char *)haystack);
-	if (needle && !len)
-		return (NULL);
-	len_n = 0;
-	while (*(needle + len_n))
-		len_n++;
-	while (*haystack && len >= len_n)
+	sign = 1;
+	rslt = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (!ft_strncmp(haystack, needle, len_n))
-			return ((char *)haystack);
-		haystack++;
-		len--;
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	return (NULL);
+	while (ft_isdigit(*str))
+	{
+		tmp = rslt * 10 + *str - '0';
+		if (tmp < rslt && sign == 1)
+			return (-1);
+		if (tmp < rslt && sign == -1)
+			return (0);
+		rslt = tmp;
+		str++;
+	}
+	return (sign * rslt);
 }
