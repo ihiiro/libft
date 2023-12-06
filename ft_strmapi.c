@@ -6,7 +6,7 @@
 /*   By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:47:11 by yel-yaqi          #+#    #+#             */
-/*   Updated: 2023/11/19 19:47:16 by yel-yaqi         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:55:34 by yel-yaqi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
+
+// char	ttoupper(unsigned int x, char c)
+// {
+// 	(void)x;
+// 	if (c >= 97 && c <= 122)
+// 		return (c - 32);
+// 	return (c);
+// }
+
+// int	main(void)
+// {
+// 	printf("%s", ft_strmapi("abcd", ttoupper));
+// }

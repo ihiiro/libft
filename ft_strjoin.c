@@ -6,7 +6,7 @@
 /*   By: yel-yaqi <yel-yaqi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:41:48 by yel-yaqi          #+#    #+#             */
-/*   Updated: 2023/11/19 19:44:02 by yel-yaqi         ###   ########.fr       */
+/*   Updated: 2023/12/06 11:51:38 by yel-yaqi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s2));
 	if (s2 == NULL && s1)
 		return (ft_strdup(s1));
+	if (!s1 && !s2)
+		return (NULL);
 	i = -1;
 	joint = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!joint)

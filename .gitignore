@@ -3,3 +3,4 @@ libft.a
 libft.h.gch
 .vscode
 *.o
+a.out*
